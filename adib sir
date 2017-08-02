@@ -1,0 +1,430 @@
+﻿===============================================================================================
+Theme Style
+===============================================================================================
+
+/*
+Theme Name: Twenty Fifteen Child
+Theme URI: http://example.com/twenty-fifteen-child/
+Description: Twenty Fifteen Child Theme
+Author: John Doe
+Author URI: http://example.com
+Template: twentyfifteen
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain: twenty-fifteen-child
+*/
+===============================================================================================
+
+example other: 
+
+/*
+Theme Name: processofrevision
+Theme URI: https://webtady.com
+Author: the webtady team
+Author URI: https://webtady.com
+Description: webtady site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+
+Text Domain: processofrevision.org 
+*/
+
+
+
+
+
+
+
+
+
+
+//pets
+//plumbing
+
+
+
+===============================================================================================
+ (Boss work) header two documents
+===============================================================================================
+ <?php 
+
+if (is_front_page()){
+
+	get_template_part('headone');
+	
+		
+}else{
+	
+	get_template_part('heartwo');
+}
+?> 
+
+//header two and one create korte hobe.
+
+owl-carousel k kibabe gallery option tree diye kora jay tar daynamic code: 
+
+
+	<?php		
+		
+if ( function_exists( 'ot_get_option' ) ) {
+$count = 0;
+    $images = explode( ',', get_post_meta( get_the_ID(), 'ltr_gallery', true ) );
+   if ( !empty( $images ) ) {
+  foreach( $images as $id ) {
+  $count++;
+    if ( !empty( $id ) ) {
+   $full_img_src = wp_get_attachment_image_src( $id, 'thumb-full' );
+            $thumb_img_src = wp_get_attachment_image_src( $id,'thumb-larged' );
+   echo '<div class="item';if($count == 1){echo ' active';} echo'"><div class="single_slide_item"><img data-thumb="'. $thumb_img_src[0].'" src="'.$thumb_img_src[0].'"/></div></div>
+   ';
+    }
+  }
+   }
+ }
+?>
+
+
+
+===============================================================================================
+ (Boss work) header er bittor aro onek header neya jay  documents
+===============================================================================================
+
+<?php 
+
+if(is_page('page-1')){
+echo'<div class="wta_main">
+	<div class="wta_center">
+		<div class="wta_glob">
+			<section class="wta_glob wta_logo_area">';	
+			echo'<a href="'; site_url();echo'"><img src="'; bloginfo('template_url'); echo'/img/logo111.png" class="theme_logo"></a>			
+			
+			</section>
+			<section class="wta_glob wta_logo_area_right">
+				<p> <span>Contact Us Now</span>
+				<a href=""> 888-888-8888</a></p>
+			</section>
+		</div>
+	</div>
+</div>';
+}
+
+elseif(is_page('page-2')){
+
+echo'<div class="wta_main wta_main_header">
+	<div class="wta_center">
+		<div class="wta_glob headertoptitle">';	
+			echo'<a href="'; site_url();echo'"><img src="'; bloginfo('template_url'); echo'/images/logo2.png" class="theme_logo"></a>			
+			
+			</div>
+		<div class="wta_glob wta_logo_right">
+			<ul class="wta_right_contact">
+					<li class="wta_call_btn"><a href="#">888 8888 8888</a></li>
+					<li class="wta_schudule_btn"><a href="#">Schedule</a></li>
+				</ul>
+		</div>
+	</div>
+</div>';
+
+}
+
+elseif(is_page('page-3')){
+
+echo'<div class="wtm_main wtm_main_header">
+	<div class="wtm_center">
+		<div class="wtm_glob headertoptitle">';	
+			echo'<a href="'; site_url();echo'"><img src="'; bloginfo('template_url'); echo'/images/logo4.png" class="theme_logo"></a>			
+		</div>
+		<div class="wtm_glob wtm_logo_right">
+			<ul class="wtm_right_contact">
+					<li class="wtm_call_btn"><a href="#">888 8888 8888</a></li>
+					<li class="wtm_schudule_btn"><a href="#">Schedule</a></li>
+				</ul>
+		</div>
+	</div>
+</div>';
+
+}
+
+elseif(is_page('page-4')){
+
+echo'<div class="wta_main wta_header_top_area">
+	<div class="wta_center">
+		<div class="wta_glob">
+			<section class="wta_glob wta_header_top">
+			   <ul class="wta_social_media">
+			   	<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			   	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+			   	<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+			   	<li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+			   </ul>
+			   
+			   <ul class="wta_menu_right">
+			   	<li><a href="#">About Us |</a></li>
+			   	<li><a href="#">Order Now</a></li>
+			   </ul>
+			</section>
+		</div>
+	</div>
+</div>
+
+<div class="wta_main">
+	<div class="wta_center">
+		<div class="wta_glob">
+			<section class="wta_glob wta_logo_area">';	
+			echo'<a href="'; site_url();echo'"><img src="'; bloginfo('template_url'); echo'/img/logo.png" class="theme_logo"></a>			
+			
+			</section>
+			<section class="wta_glob wta_logo_area_right">
+				<p><i class="fa fa-volume-control-phone fa-3x" aria-hidden="true"></i><a href=""> 888-888-8888</a></p>
+			</section>
+		</div>
+	</div>
+</div>';
+
+}
+else{
+echo'<div class="wta_main">
+	<div class="wta_center">
+		<div class="wta_glob">
+			<section class="wta_glob wta_logo_area">';	
+			echo'<a href="'; site_url();echo'"><img src="'; bloginfo('template_url'); echo'/images/logo.png" class="theme_logo"></a>			
+			
+			</section>
+			<section class="wta_glob wta_logo_area_right">
+				<p> <span>Contact Us Now</span>
+				<a href=""> 888-888-8888</a></p>
+			</section>
+		</div>
+	</div>
+</div>';
+
+}
+
+
+?>
+
+
+
+===============================================================================================
+
+
+
+
+===============================================================================================
+Title Tag:
+===============================================================================================
+<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+<title> <?php wp_title('', true,''); ?> </title>
+===============================================================================================
+
+
+
+===============================================================================================
+Import CSS:
+===============================================================================================
+<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+===============================================================================================
+
+
+
+
+===============================================================================================
+Import JQuery:
+===============================================================================================
+<script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+Image path:
+===============================================================================================
+<img src="<?php bloginfo('template_url') ?>/images/slides.jpg">﻿
+===============================================================================================
+
+
+
+
+===============================================================================================
+Header:
+===============================================================================================
+<?php include (TEMPLATEPATH."/header.php');?>)
+<?php get_header(); ?>
+<?php wp_head(); ?>
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+Footer:
+===============================================================================================
+<?php include (TEMPLATEPATH."/footer.php');?>)
+
+<?php get_footer(); ?>
+
+ <?php wp_footer(); ?> 
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+Template Content:
+===============================================================================================
+<?php 
+/*
+Template Name: contact us
+*/
+
+?>
+<?php get_header(); ?>
+
+
+<?php while ( have_posts() ): the_post(); ?>
+		
+
+					<?php the_content(); ?>
+
+			<?php if ( ot_get_option('page-comments') == 'on' ) { comments_template('/comments.php',true); } ?>
+			
+		<?php endwhile; ?>
+		
+<?php get_footer(); ?>
+
+===============================================================================================
+
+
+
+================================================================================================
+Get Slider => Slider name: ltc/slider.php
+================================================================================================
+
+<?php get_template_part('ltc/slider'); ?>
+
+================================================================================================
+
+
+
+===============================================================================================
+Menu Register
+===============================================================================================
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'extra-menu' => __( 'Extra Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
+
+================================================================================================
+
+ <?php
+     wp_nav_menu( array(
+    'menu'           => 'Primary Menu', // Do not fall back to first non-empty menu.
+    'theme_location' => '__no_such_location',
+ 'menu_class' => 'nav navbar-nav',
+ 'menu_id' => 'menu',
+ 'container' => 'ul',
+ 'container_class' => 'collapse navbar-collapse'
+   
+) );
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+Contact form 7
+===============================================================================================
+<?php echo do_shortcode( '[contact-form-7 id="1234" title="Contact form 1"]' ); ?>
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+n-th folder
+===============================================================================================
+
+<link href="<?php echo get_template_directory_uri(); ?>/landt/csso/stylec619.css?v=1.0" rel="stylesheet" />
+
+===============================================================================================
+
+
+
+
+
+
+===============================================================================================
+Redirect a page
+===============================================================================================
+
+
+<?php /*  
+Template Name: Page Redirect
+*/ 
+
+header('Location: http://www.nameofnewsite.com');
+exit();
+
+?>
+
+===============================================================================================
+
+
+
+===============================================================================================
+Display single product image
+===============================================================================================
+.woocommerce div.product div.images.woocommerce-product-gallery{
+opacity:1 !important;
+}
+
+figure {
+display: block;
+margin-top: 0em;
+margin-bottom: 0em;
+margin-left: 0px;
+margin-right: 0px;
+}
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+---------------
+===============================================================================================
+-------------------
+===============================================================================================
+
+
+
+
+
+===============================================================================================
+Change return shop to custom shop page
+===============================================================================================
+
+/**
+ * Changes the redirect URL for the Return To Shop button in the cart.
+ *
+ * @return string
+ */
+function wc_empty_cart_redirect_url() {
+  return 'https://www.techshelpme.com/shop/';
+}
+add_filter( 'woocommerce_return_to_shop_redirect', 'wc_empty_cart_redirect_url' );
+===============================================================================================
